@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "e2e:headless": "playwright test --config=./e2e/playwright.config.ts",
+    "e2e:headed": "playwright test --headed --config=./e2e/playwright.config.ts",
+    "e2e:debug": "playwright test --debug",
+    "e2e:codegen": "playwright codegen"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +30,7 @@
     "@angular-devkit/build-angular": "^14.1.3",
     "@angular/cli": "~14.1.3",
     "@angular/compiler-cli": "^14.1.0",
+    "@playwright/test": "^1.25.1",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
