@@ -9,7 +9,7 @@
     "test": "ng test",
     "e2e:headless": "playwright test --config=./e2e/playwright.config.ts",
     "e2e:headed": "playwright test --headed --config=./e2e/playwright.config.ts",
-    "e2e:debug": "playwright test --debug",
+    "e2e:debug": "playwright test --debug --config=./e2e/playwright.config.ts",
     "e2e:codegen": "playwright codegen"
   },
   "private": true,
