@@ -102,6 +102,7 @@ const config: PlaywrightTestConfig = {
   webServer: {
     command: 'ng serve',
     port: 4200,
+    reuseExistingServer: true
   },
 };
 
