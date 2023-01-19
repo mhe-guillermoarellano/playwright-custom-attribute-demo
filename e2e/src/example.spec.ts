@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import percySnapshot from '@percy/playwright';
 
 test.describe('Angular Ng14 Localhost Playwright Test', () => {
   test('should locate "data-automation-id" attribute for element selection', async ({
@@ -11,6 +12,7 @@ test.describe('Angular Ng14 Localhost Playwright Test', () => {
     );
 
     await expect(dataAutomationIdTest).toHaveCount(1);
+    await percySnapshot(page, 'Barebones NG14 Main Landing Page');
   });
 
   test('should locate "data-test-id" attribute for element selection', async ({
